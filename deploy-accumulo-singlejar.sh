@@ -2,8 +2,9 @@
 mvn package -P accumulo-container-singlejar -Dfindbugs.skip -Dspotbugs.skip -DskipTest -Djava.awt.headless=true
 
 mvn deploy:deploy-file -DgroupId=org.locationtech.geowave \
-  -DartifactId=geowave-accumulo-singlejar \
+  -DartifactId=geowave-deploy \
   -Dversion=1.2.0-SNAPSHOT \
+  -Dclassifier=accumulo \
   -Dpackaging=jar \
   -Dfile=deploy/target/geowave-deploy-1.2.0-SNAPSHOT-accumulo.jar \
   -DrepositoryId=safehouse-maven-snapshot \
